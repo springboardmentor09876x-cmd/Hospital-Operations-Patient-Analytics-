@@ -1,0 +1,21 @@
+Hospital ID,Hospital Name,City,State,Hospital Type,Beds Available,ICU Beds,Staff Count
+H001,Apollo Multispecialty Hospital,Chennai,Tamil Nadu,Private,147,14,738
+H002,Fortis Care Hospital,Delhi,Delhi,Private,95,8,488
+H003,AIIMS General Hospital,Delhi,Delhi,Government,82,9,344
+H004,Manipal Health Centre,Bengaluru,Karnataka,Private,85,11,352
+H005,KIMS Superspeciality Hospital,Hyderabad,Telangana,Private,287,31,1069
+H006,Government General Hospital,Vijayawada,Andhra Pradesh,Government,177,20,649
+H007,Care Multispeciality Hospital,Vijayawada,Andhra Pradesh,Private,71,6,350
+H008,Lilavati Care Hospital,Mumbai,Maharashtra,Private,150,17,705
+H009,Sion General Hospital,Mumbai,Maharashtra,Government,125,18,451
+H010,Ruby Hall Clinic,Pune,Maharashtra,Private,40,6,178
+H011,Medanta Hospital,Gurugram,Haryana,Private,41,5,176
+H012,SGPGI Hospital,Lucknow,Uttar Pradesh,Government,133,12,691
+H013,Christian Medical College Hospital,Vellore,Tamil Nadu,Trust,270,38,1333
+H014,Narayana Health City,Bengaluru,Karnataka,Private,86,12,405
+H015,Kolkata Medical College Hospital,Kolkata,West Bengal,Government,64,6,295
+H016,Yashoda Hospitals,Hyderabad,Telangana,Private,110,14,594
+H017,Sassoon General Hospital,Pune,Maharashtra,Government,63,5,345
+H018,Global Trust Hospital,Jaipur,Rajasthan,Trust,82,7,342
+H019,Rainbow Children's Hospital,Chennai,Tamil Nadu,Private,99,10,394
+H020,Civil Hospital,Ahmedabad,Gujarat,Government,40,4,204

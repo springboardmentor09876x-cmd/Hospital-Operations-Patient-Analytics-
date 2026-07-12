@@ -1,0 +1,121 @@
+Hospital ID,Department,Doctors,Nurses,Equipment,Beds Available,Beds Occupied
+H001,Cardiology,4,11,9,14,11
+H001,Endocrinology,4,13,6,15,11
+H001,General Medicine,4,13,11,15,10
+H001,Oncology,4,15,8,15,12
+H001,Orthopedics,4,11,9,16,10
+H001,Pulmonology,4,12,6,16,15
+H002,Cardiology,3,9,5,10,7
+H002,Endocrinology,3,11,9,11,9
+H002,General Medicine,3,8,5,10,9
+H002,Oncology,3,11,8,10,8
+H002,Orthopedics,3,8,6,10,9
+H002,Pulmonology,3,10,8,9,7
+H003,Cardiology,2,7,5,9,5
+H003,Endocrinology,2,7,6,9,7
+H003,General Medicine,2,6,5,8,7
+H003,Oncology,2,5,3,8,5
+H003,Orthopedics,2,7,3,9,8
+H003,Pulmonology,2,8,5,8,6
+H004,Cardiology,2,7,4,9,7
+H004,Endocrinology,2,6,5,9,6
+H004,General Medicine,2,7,6,9,7
+H004,Oncology,2,7,5,9,7
+H004,Orthopedics,2,6,5,9,7
+H004,Pulmonology,2,7,5,8,6
+H005,Cardiology,8,25,18,29,24
+H005,Endocrinology,8,27,15,30,25
+H005,General Medicine,8,28,22,30,21
+H005,Oncology,8,21,18,30,18
+H005,Orthopedics,8,31,12,31,23
+H005,Pulmonology,8,32,14,30,19
+H006,Cardiology,5,18,14,19,15
+H006,Endocrinology,5,18,8,18,17
+H006,General Medicine,5,13,11,18,11
+H006,Oncology,5,14,8,19,11
+H006,Orthopedics,5,19,12,19,11
+H006,Pulmonology,5,18,13,19,13
+H007,Cardiology,2,7,3,7,4
+H007,Endocrinology,2,5,6,7,4
+H007,General Medicine,2,6,4,7,6
+H007,Oncology,2,7,6,8,6
+H007,Orthopedics,2,6,4,6,4
+H007,Pulmonology,2,5,5,8,6
+H008,Cardiology,4,13,8,16,9
+H008,Endocrinology,4,11,7,15,12
+H008,General Medicine,4,10,9,16,15
+H008,Oncology,4,14,12,16,14
+H008,Orthopedics,4,15,9,16,14
+H008,Pulmonology,4,11,8,15,10
+H009,Cardiology,3,8,5,12,11
+H009,Endocrinology,3,10,5,13,9
+H009,General Medicine,4,11,9,13,8
+H009,Oncology,4,15,9,14,8
+H009,Orthopedics,3,10,8,13,10
+H009,Pulmonology,3,9,6,13,10
+H010,Cardiology,2,8,4,5,3
+H010,Endocrinology,2,7,6,5,4
+H010,General Medicine,2,6,5,5,3
+H010,Oncology,2,6,3,5,3
+H010,Orthopedics,2,7,4,5,3
+H010,Pulmonology,2,6,3,5,4
+H011,Cardiology,2,8,5,5,4
+H011,Endocrinology,2,5,4,5,4
+H011,General Medicine,2,6,4,5,4
+H011,Oncology,2,6,5,5,4
+H011,Orthopedics,2,7,6,5,4
+H011,Pulmonology,2,7,5,5,4
+H012,Cardiology,4,14,8,13,9
+H012,Endocrinology,4,11,11,14,13
+H012,General Medicine,4,15,8,14,12
+H012,Oncology,4,10,10,14,9
+H012,Orthopedics,4,12,7,14,9
+H012,Pulmonology,4,16,11,14,11
+H013,Cardiology,8,31,22,28,17
+H013,Endocrinology,8,20,18,29,27
+H013,General Medicine,7,25,13,28,26
+H013,Oncology,7,19,11,27,15
+H013,Orthopedics,8,27,18,29,17
+H013,Pulmonology,7,20,16,27,24
+H014,Cardiology,3,8,5,9,5
+H014,Endocrinology,2,7,5,9,5
+H014,General Medicine,2,7,6,9,7
+H014,Oncology,2,6,5,8,5
+H014,Orthopedics,2,7,5,9,6
+H014,Pulmonology,2,6,5,9,6
+H015,Cardiology,2,8,5,7,4
+H015,Endocrinology,2,6,4,6,4
+H015,General Medicine,2,8,4,7,6
+H015,Oncology,2,7,5,7,5
+H015,Orthopedics,2,7,3,6,5
+H015,Pulmonology,2,5,4,7,5
+H016,Cardiology,3,10,5,12,9
+H016,Endocrinology,3,12,9,11,7
+H016,General Medicine,3,10,8,12,9
+H016,Oncology,3,12,7,12,9
+H016,Orthopedics,3,9,5,11,9
+H016,Pulmonology,3,8,5,11,8
+H017,Cardiology,2,7,5,7,7
+H017,Endocrinology,2,7,4,7,4
+H017,General Medicine,2,5,6,7,7
+H017,Oncology,2,7,5,6,5
+H017,Orthopedics,2,6,3,7,6
+H017,Pulmonology,2,8,5,6,5
+H018,Cardiology,2,6,3,9,7
+H018,Endocrinology,2,6,5,9,7
+H018,General Medicine,2,8,5,8,5
+H018,Oncology,2,7,4,9,6
+H018,Orthopedics,2,7,4,9,7
+H018,Pulmonology,2,5,6,9,7
+H019,Cardiology,3,11,8,11,8
+H019,Endocrinology,3,11,7,10,8
+H019,General Medicine,3,9,5,11,8
+H019,Oncology,3,8,8,10,6
+H019,Orthopedics,3,8,6,10,6
+H019,Pulmonology,3,12,8,10,7
+H020,Cardiology,2,7,5,5,3
+H020,Endocrinology,2,8,4,5,3
+H020,General Medicine,2,6,5,5,4
+H020,Oncology,2,7,3,5,4
+H020,Orthopedics,2,6,4,5,3
+H020,Pulmonology,2,7,6,5,4
