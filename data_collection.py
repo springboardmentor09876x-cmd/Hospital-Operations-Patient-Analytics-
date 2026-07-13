@@ -14,9 +14,15 @@ import matplotlib.pyplot as plt
 # ===============================
 # Load Dataset
 # ===============================
-# Load the Excel file containing hospital patient data
+# Load the CSV file containing hospital patient data
+df = pd.read_csv("hospital_raw_data.csv")
 
-df = pd.read_excel("hospital_raw_data.csv.xlsx")
+# Clean column names and rename the typo column 'Hosp+C1:BB1ital Type' -> 'Hospital Type'
+df.columns = df.columns.astype(str).str.strip()
+df = df.rename(columns={
+    'Hosp+C1:BB1ital Type': 'Hospital Type',
+    'Hosp?ital Type': 'Hospital Type'
+})
 
 
 
