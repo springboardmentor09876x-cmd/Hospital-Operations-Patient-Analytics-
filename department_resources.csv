@@ -1,0 +1,7 @@
+department_id,Department,total_beds,total_staff,total_equipment
+D001,Cardiology,58,43,24
+D002,Endocrinology,62,22,38
+D003,General Medicine,40,53,35
+D004,Oncology,38,37,20
+D005,Orthopedics,30,38,30
+D006,Pulmonology,55,54,33
