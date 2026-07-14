@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import os
 
 # ============================================================
 # Load Datasets
@@ -93,28 +94,17 @@ patient.rename(columns={
 }, inplace=True)
 
 # ============================================================
-# Add Missing Columns from Reference Dataset
+# Add & Expand Reference Columns Safely
 # ============================================================
 
-for col in reference.columns:
-    if col not in patient.columns:
-        patient[col] = pd.NA
-
-# ============================================================
-# Expand Reference Dataset
-# ============================================================
-
+# Expand the reference dataframe to match the size of patient
 repeat = (len(patient) // len(reference)) + 1
-
-reference = pd.concat(
+expanded_reference = pd.concat(
     [reference] * repeat,
     ignore_index=True
-).iloc[:len(patient)]
+).iloc[:len(patient)].reset_index(drop=True)
 
-# ============================================================
-# Keep Patient Columns
-# ============================================================
-
+# Define columns we want to retain from original patient dataset
 keep_columns = [
     "Patient ID",
     "Age",
@@ -132,9 +122,10 @@ keep_columns = [
     "ICU Beds"
 ]
 
-for col in reference.columns:
+# Pull the other columns directly from our expanded reference
+for col in expanded_reference.columns:
     if col not in keep_columns:
-        patient[col] = reference[col].values
+        patient[col] = expanded_reference[col].values
 
 # ============================================================
 # Generate Admission & Discharge Dates
@@ -179,14 +170,13 @@ last_names = [
     "Naidu","Yadav","Joshi","Kapoor","Mishra"
 ]
 
-unique_doctors = sorted(reference["Doctor"].unique())
+unique_doctors = sorted(expanded_reference["Doctor"].unique())
 
 doctor_map = {}
-
 for i, d in enumerate(unique_doctors):
     doctor_map[d] = f"Dr. {first_names[i % len(first_names)]} {last_names[(i // len(first_names)) % len(last_names)]}"
 
-patient["Doctor"] = reference["Doctor"].map(doctor_map)
+patient["Doctor"] = expanded_reference["Doctor"].map(doctor_map)
 
 # ============================================================
 # Save Final Dataset
@@ -207,38 +197,36 @@ print(patient[["State", "Beds Available", "ICU Beds"]].isnull().sum())
 print("\nFinal Dataset Saved As : hospital_raw_data.csv")
 
 
+# ============================================================
+# Master Integration Script
+# ============================================================
 
-
-import pandas as pd
-import numpy as np
-
-# 1. Load your raw dataset directly from Colab
-print("Loading your raw dataset...")
+print("\nLoading your raw dataset...")
 try:
     main_df = pd.read_csv('hospital_raw_data.csv')
 except FileNotFoundError:
-    print("❌ Error: 'hospital_raw_data.csv' not found. Please ensure you uploaded it to Colab's left sidebar.")
+    print("❌ Error: 'hospital_raw_data.csv' not found.")
     raise
 
 n_rows = len(main_df)
 np.random.seed(42)
 
-print("Generating and mapping the remaining columns from the images...")
-# 2. Extract unique categories to map logically to your actual hospitals & departments
-hospitals = main_df['Hospital'].unique()
+print("Generating and mapping the remaining columns...")
+
+hospitals = main_df['Hospital'].unique() if 'Hospital' in main_df.columns else ['General Hospital']
 hospital_mapping = {h: {
     'Hospital ID': f"HOSP_{i+1:03d}",
     'Hospital Name': f"{h} Medical Center",
     'Hospital Type': np.random.choice(['Private', 'Public', 'Trust'], p=[0.5, 0.3, 0.2])
 } for i, h in enumerate(hospitals)}
 
-departments = main_df['Department'].unique()
+departments = main_df['Department'].unique() if 'Department' in main_df.columns else ['Emergency']
 dept_mapping = {d: f"DEPT_{i+1:02d}" for i, d in enumerate(departments)}
 
-h_ids = [hospital_mapping[h]['Hospital ID'] for h in main_df['Hospital']]
-h_names = [hospital_mapping[h]['Hospital Name'] for h in main_df['Hospital']]
-h_types = [hospital_mapping[h]['Hospital Type'] for h in main_df['Hospital']]
-d_ids = [dept_mapping[d] for d in main_df['Department']]
+h_ids = [hospital_mapping[h]['Hospital ID'] for h in main_df['Hospital']] if 'Hospital' in main_df.columns else [f"HOSP_{np.random.randint(1,10):03d}" for _ in range(n_rows)]
+h_names = [hospital_mapping[h]['Hospital Name'] for h in main_df['Hospital']] if 'Hospital' in main_df.columns else [f"General Hospital_{np.random.randint(1,10)}" for _ in range(n_rows)]
+h_types = [hospital_mapping[h]['Hospital Type'] for h in main_df['Hospital']] if 'Hospital' in main_df.columns else [np.random.choice(['Private', 'Public', 'Trust']) for _ in range(n_rows)]
+d_ids = [dept_mapping[d] for d in main_df['Department']] if 'Department' in main_df.columns else [f"DEPT_{np.random.randint(1,5):02d}" for _ in range(n_rows)]
 
 # 3. Create the dataframe for the missing columns
 remaining_df = pd.DataFrame({
@@ -278,18 +266,15 @@ remaining_df = pd.DataFrame({
     'ICU_Occupancy_Rate': np.random.uniform(40, 90, size=n_rows).round(2),
     'Staff_Utilization_Calculation': np.random.uniform(50, 90, size=n_rows).round(2),
     'Readmission_Flag': main_df['Readmission'],
-    'Transferred_Flag': np.where(main_df['Wait_Time_Minutes'] > 120, 1, 0),
+    'Transferred_Flag': np.where(main_df['Wait_Time_Minutes'] > 120, 1, 0) if 'Wait_Time_Minutes' in main_df.columns else np.random.choice([0, 1], size=n_rows, p=[0.1, 0.9]),
     'Equipment_InUse_Flag': np.random.choice([0, 1], size=n_rows, p=[0.3, 0.7])
 })
 
-# 4. Merge them seamlessly
+# Merge datasets
 print("Merging datasets together...")
 merged_df = pd.merge(main_df, remaining_df, on='Patient ID', how='left')
 
-# 5. Save final master dataset
+# Save final master dataset
 merged_df.to_csv('hospital_master_dataset.csv', index=False)
 print("\n🎉 Success! Combined dataset saved as 'hospital_master_dataset.csv'")
 print(f"Total rows and columns: {merged_df.shape}")
-
-# Take a peek
-merged_df.head()
