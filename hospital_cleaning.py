@@ -99,8 +99,8 @@ df.drop_duplicates(inplace=True)
 # Step 8: Save Cleaned Dataset as CSV
 # ----------------------------------------------------------
 
-df.to_csv("Cleaned_Hospital_Dataset.csv", index=False)
+df.to_csv("hospital_cleaned.csv", index=False)
 
 print("\nDataset preprocessing completed successfully.")
 print("Final Dataset Shape:", df.shape)
-print("Cleaned dataset saved as 'Cleaned_Hospital_Dataset.csv'")
+print("Cleaned dataset saved as 'hospital_cleaned.csv'")
