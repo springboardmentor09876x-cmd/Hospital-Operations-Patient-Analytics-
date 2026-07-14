@@ -78,7 +78,6 @@ No data cleaning or transformation is performed in Module 1.
 ---
 
 ## Author
-
-Jetti Srinesh
+Sriramoji Tharun
 B.Tech Artificial Intelligence
 Amrita Vishwa Vidyapeetham
