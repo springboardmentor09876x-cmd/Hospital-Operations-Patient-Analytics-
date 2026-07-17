@@ -1,0 +1,121 @@
+Equipment ID,Hospital ID,Equipment,Equipment Number,Equipment_Total_Inventory,Equipment_Usage_Duration_Hours,Equipment Status,Equipment_InUse_Flag
+EQ0001,H001,Ventilator,VEN-0001,14,10,Under Maintenance,0
+EQ0002,H001,ECG Machine,ECG-0002,12,9,Under Maintenance,0
+EQ0003,H001,MRI Scanner,MRI-0003,3,3,Under Maintenance,0
+EQ0004,H001,X-Ray Machine,X-R-0004,5,20,In Use,1
+EQ0005,H001,Dialysis Machine,DIA-0005,7,10,Under Maintenance,0
+EQ0006,H001,Defibrillator,DEF-0006,5,13,Under Maintenance,0
+EQ0007,H002,Ventilator,VEN-0007,12,15,Under Maintenance,0
+EQ0008,H002,ECG Machine,ECG-0008,4,10,Under Maintenance,0
+EQ0009,H002,MRI Scanner,MRI-0009,14,16,Under Maintenance,0
+EQ0010,H002,X-Ray Machine,X-R-0010,14,1,Under Maintenance,0
+EQ0011,H002,Dialysis Machine,DIA-0011,3,11,Under Maintenance,0
+EQ0012,H002,Defibrillator,DEF-0012,5,13,Under Maintenance,0
+EQ0013,H003,Ventilator,VEN-0013,10,15,Under Maintenance,0
+EQ0014,H003,ECG Machine,ECG-0014,13,1,Under Maintenance,0
+EQ0015,H003,MRI Scanner,MRI-0015,3,12,Under Maintenance,0
+EQ0016,H003,X-Ray Machine,X-R-0016,13,14,Under Maintenance,0
+EQ0017,H003,Dialysis Machine,DIA-0017,3,4,Under Maintenance,0
+EQ0018,H003,Defibrillator,DEF-0018,6,1,Under Maintenance,0
+EQ0019,H004,Ventilator,VEN-0019,9,8,Under Maintenance,0
+EQ0020,H004,ECG Machine,ECG-0020,6,2,Under Maintenance,0
+EQ0021,H004,MRI Scanner,MRI-0021,8,12,Under Maintenance,0
+EQ0022,H004,X-Ray Machine,X-R-0022,9,20,In Use,1
+EQ0023,H004,Dialysis Machine,DIA-0023,14,2,Under Maintenance,0
+EQ0024,H004,Defibrillator,DEF-0024,8,5,Under Maintenance,0
+EQ0025,H005,Ventilator,VEN-0025,10,15,Under Maintenance,0
+EQ0026,H005,ECG Machine,ECG-0026,8,22,In Use,1
+EQ0027,H005,MRI Scanner,MRI-0027,11,18,Under Maintenance,0
+EQ0028,H005,X-Ray Machine,X-R-0028,6,11,Under Maintenance,0
+EQ0029,H005,Dialysis Machine,DIA-0029,3,5,Under Maintenance,0
+EQ0030,H005,Defibrillator,DEF-0030,14,5,Under Maintenance,0
+EQ0031,H006,Ventilator,VEN-0031,13,17,Under Maintenance,0
+EQ0032,H006,ECG Machine,ECG-0032,5,4,Under Maintenance,0
+EQ0033,H006,MRI Scanner,MRI-0033,9,5,Under Maintenance,0
+EQ0034,H006,X-Ray Machine,X-R-0034,9,16,Under Maintenance,0
+EQ0035,H006,Dialysis Machine,DIA-0035,13,2,Under Maintenance,0
+EQ0036,H006,Defibrillator,DEF-0036,12,2,Under Maintenance,0
+EQ0037,H007,Ventilator,VEN-0037,12,19,In Use,1
+EQ0038,H007,ECG Machine,ECG-0038,8,21,In Use,1
+EQ0039,H007,MRI Scanner,MRI-0039,7,11,Under Maintenance,0
+EQ0040,H007,X-Ray Machine,X-R-0040,5,5,Under Maintenance,0
+EQ0041,H007,Dialysis Machine,DIA-0041,10,18,Under Maintenance,0
+EQ0042,H007,Defibrillator,DEF-0042,5,14,Under Maintenance,0
+EQ0043,H008,Ventilator,VEN-0043,6,23,In Use,1
+EQ0044,H008,ECG Machine,ECG-0044,12,8,Under Maintenance,0
+EQ0045,H008,MRI Scanner,MRI-0045,6,5,Under Maintenance,0
+EQ0046,H008,X-Ray Machine,X-R-0046,3,6,Under Maintenance,0
+EQ0047,H008,Dialysis Machine,DIA-0047,3,10,Under Maintenance,0
+EQ0048,H008,Defibrillator,DEF-0048,10,10,Under Maintenance,0
+EQ0049,H009,Ventilator,VEN-0049,10,3,Under Maintenance,0
+EQ0050,H009,ECG Machine,ECG-0050,10,21,In Use,1
+EQ0051,H009,MRI Scanner,MRI-0051,13,11,Under Maintenance,0
+EQ0052,H009,X-Ray Machine,X-R-0052,3,1,Under Maintenance,0
+EQ0053,H009,Dialysis Machine,DIA-0053,7,18,Under Maintenance,0
+EQ0054,H009,Defibrillator,DEF-0054,5,3,Under Maintenance,0
+EQ0055,H010,Ventilator,VEN-0055,10,22,In Use,1
+EQ0056,H010,ECG Machine,ECG-0056,10,9,Under Maintenance,0
+EQ0057,H010,MRI Scanner,MRI-0057,3,9,Under Maintenance,0
+EQ0058,H010,X-Ray Machine,X-R-0058,12,16,Under Maintenance,0
+EQ0059,H010,Dialysis Machine,DIA-0059,10,10,Under Maintenance,0
+EQ0060,H010,Defibrillator,DEF-0060,10,3,Under Maintenance,0
+EQ0061,H011,Ventilator,VEN-0061,3,7,Under Maintenance,0
+EQ0062,H011,ECG Machine,ECG-0062,13,4,Under Maintenance,0
+EQ0063,H011,MRI Scanner,MRI-0063,7,11,Under Maintenance,0
+EQ0064,H011,X-Ray Machine,X-R-0064,12,1,Under Maintenance,0
+EQ0065,H011,Dialysis Machine,DIA-0065,7,12,Under Maintenance,0
+EQ0066,H011,Defibrillator,DEF-0066,3,18,Under Maintenance,0
+EQ0067,H012,Ventilator,VEN-0067,3,4,Under Maintenance,0
+EQ0068,H012,ECG Machine,ECG-0068,7,1,Under Maintenance,0
+EQ0069,H012,MRI Scanner,MRI-0069,9,15,Under Maintenance,0
+EQ0070,H012,X-Ray Machine,X-R-0070,6,5,Under Maintenance,0
+EQ0071,H012,Dialysis Machine,DIA-0071,10,15,Under Maintenance,0
+EQ0072,H012,Defibrillator,DEF-0072,9,21,In Use,1
+EQ0073,H013,Ventilator,VEN-0073,5,6,Under Maintenance,0
+EQ0074,H013,ECG Machine,ECG-0074,11,1,Under Maintenance,0
+EQ0075,H013,MRI Scanner,MRI-0075,4,9,Under Maintenance,0
+EQ0076,H013,X-Ray Machine,X-R-0076,11,16,Under Maintenance,0
+EQ0077,H013,Dialysis Machine,DIA-0077,3,5,Under Maintenance,0
+EQ0078,H013,Defibrillator,DEF-0078,8,10,Under Maintenance,0
+EQ0079,H014,Ventilator,VEN-0079,6,8,Under Maintenance,0
+EQ0080,H014,ECG Machine,ECG-0080,4,13,Under Maintenance,0
+EQ0081,H014,MRI Scanner,MRI-0081,10,9,Under Maintenance,0
+EQ0082,H014,X-Ray Machine,X-R-0082,10,1,Under Maintenance,0
+EQ0083,H014,Dialysis Machine,DIA-0083,11,18,Under Maintenance,0
+EQ0084,H014,Defibrillator,DEF-0084,8,2,Under Maintenance,0
+EQ0085,H015,Ventilator,VEN-0085,3,21,In Use,1
+EQ0086,H015,ECG Machine,ECG-0086,4,12,Under Maintenance,0
+EQ0087,H015,MRI Scanner,MRI-0087,4,10,Under Maintenance,0
+EQ0088,H015,X-Ray Machine,X-R-0088,14,4,Under Maintenance,0
+EQ0089,H015,Dialysis Machine,DIA-0089,12,17,Under Maintenance,0
+EQ0090,H015,Defibrillator,DEF-0090,5,14,Under Maintenance,0
+EQ0091,H016,Ventilator,VEN-0091,5,22,In Use,1
+EQ0092,H016,ECG Machine,ECG-0092,3,3,Under Maintenance,0
+EQ0093,H016,MRI Scanner,MRI-0093,10,1,Under Maintenance,0
+EQ0094,H016,X-Ray Machine,X-R-0094,13,4,Under Maintenance,0
+EQ0095,H016,Dialysis Machine,DIA-0095,6,9,Under Maintenance,0
+EQ0096,H016,Defibrillator,DEF-0096,4,14,Under Maintenance,0
+EQ0097,H017,Ventilator,VEN-0097,10,10,Under Maintenance,0
+EQ0098,H017,ECG Machine,ECG-0098,11,20,In Use,1
+EQ0099,H017,MRI Scanner,MRI-0099,11,6,Under Maintenance,0
+EQ0100,H017,X-Ray Machine,X-R-0100,5,18,Under Maintenance,0
+EQ0101,H017,Dialysis Machine,DIA-0101,11,15,Under Maintenance,0
+EQ0102,H017,Defibrillator,DEF-0102,8,6,Under Maintenance,0
+EQ0103,H018,Ventilator,VEN-0103,11,18,Under Maintenance,0
+EQ0104,H018,ECG Machine,ECG-0104,3,5,Under Maintenance,0
+EQ0105,H018,MRI Scanner,MRI-0105,6,15,Under Maintenance,0
+EQ0106,H018,X-Ray Machine,X-R-0106,13,2,Under Maintenance,0
+EQ0107,H018,Dialysis Machine,DIA-0107,7,12,Under Maintenance,0
+EQ0108,H018,Defibrillator,DEF-0108,7,23,In Use,1
+EQ0109,H019,Ventilator,VEN-0109,13,14,Under Maintenance,0
+EQ0110,H019,ECG Machine,ECG-0110,5,14,Under Maintenance,0
+EQ0111,H019,MRI Scanner,MRI-0111,8,14,Under Maintenance,0
+EQ0112,H019,X-Ray Machine,X-R-0112,9,21,In Use,1
+EQ0113,H019,Dialysis Machine,DIA-0113,12,12,Under Maintenance,0
+EQ0114,H019,Defibrillator,DEF-0114,6,12,Under Maintenance,0
+EQ0115,H020,Ventilator,VEN-0115,11,1,Under Maintenance,0
+EQ0116,H020,ECG Machine,ECG-0116,4,12,Under Maintenance,0
+EQ0117,H020,MRI Scanner,MRI-0117,11,17,Under Maintenance,0
+EQ0118,H020,X-Ray Machine,X-R-0118,11,7,Under Maintenance,0
+EQ0119,H020,Dialysis Machine,DIA-0119,3,21,In Use,1
+EQ0120,H020,Defibrillator,DEF-0120,8,4,Under Maintenance,0
