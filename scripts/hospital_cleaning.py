@@ -1,56 +1,55 @@
 import pandas as pd
 from pathlib import Path
 
-# -------------------------------
+# -----------------------------------
 # File Paths
-# -------------------------------
-input_file = Path("data") / "hospital_raw_data.csv"
+# -----------------------------------
+input_file = Path("data") / "hospital_cleaned.csv"
 output_file = Path("data") / "hospital_cleaned.csv"
 
-# -------------------------------
-# Load Dataset
-# -------------------------------
-print("Loading Raw Dataset...")
+print("Loading Mentor's Cleaned Dataset...")
 
+# -----------------------------------
+# Load Dataset
+# -----------------------------------
 df = pd.read_csv(input_file)
 
 print("Dataset Loaded Successfully!")
 
-# -------------------------------
-# Remove Duplicate Rows
-# -------------------------------
+# -----------------------------------
+# Remove Duplicate Rows (if any)
+# -----------------------------------
 duplicates = df.duplicated().sum()
 print(f"Duplicate Rows Found: {duplicates}")
 
-df = df.drop_duplicates()
+df.drop_duplicates(inplace=True)
 
-# -------------------------------
-# Handle Missing Values
-# -------------------------------
+# -----------------------------------
+# Missing Values Before Cleaning
+# -----------------------------------
 print("\nMissing Values Before Cleaning:")
 print(df.isnull().sum())
 
-# Fill numeric columns with median
-numeric_cols = df.select_dtypes(include=['number']).columns
-df[numeric_cols] = df[numeric_cols].fillna(df[numeric_cols].median())
+# -----------------------------------
+# Update Transfer_Date
+# -----------------------------------
+if "Transfer_Date" in df.columns:
+    df["Transfer_Date"] = (
+        df["Transfer_Date"]
+        .replace("", pd.NA)
+        .fillna("Not Transferred")
+    )
 
-# Fill text columns with "Unknown"
-text_cols = df.select_dtypes(include=['object']).columns
-df[text_cols] = df[text_cols].fillna("Unknown")
+# -----------------------------------
+# Missing Values After Cleaning
+# -----------------------------------
+print("\nMissing Values After Cleaning:")
+print(df.isnull().sum())
 
-# -------------------------------
-# Standardize Column Names
-# -------------------------------
-df.columns = (
-    df.columns.str.strip()
-              .str.lower()
-              .str.replace(" ", "_")
-)
-
-# -------------------------------
-# Save Cleaned Dataset
-# -------------------------------
+# -----------------------------------
+# Save Dataset
+# -----------------------------------
 df.to_csv(output_file, index=False)
 
 print("\nCleaning Completed Successfully!")
-print(f"Cleaned Dataset Saved To: {output_file}")
+print(f"Updated dataset saved to: {output_file}")
