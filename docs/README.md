@@ -180,26 +180,23 @@ The datasets were cleaned, transformed, and merged into a final analytical datas
 MedTrack_DV/
 │
 ├── dashboard/
-│   ├── MedTrack_DV.twbx
-│   └── dashboard_storyboard.pdf
+│   ├── dashboard_storyboard.pdf
+│   └── MedTrack_DV.twb
 │
 ├── data/
-│   ├── hospital_raw_data.xlsx
 │   ├── hospital_cleaned.xlsx
-│   └── hospital_final_dataset.xlsx
+│   ├── hospital_final_dataset.xlsx
+│   └── hospital_raw_data.xlsx
 │
-├── raw-data/
+├── notebooks/
+│   ├── data_collection.ipynb
+│   ├── hospital_cleaning.ipynb
+│   └── generate_hospital_kpis.ipynb
+│
+├── raw-dataset/
 │   ├── department_resources.xlsx
 │   ├── hospital_info.xlsx
 │   └── patient_admissions.xlsx
-│
-├── notebooks/
-│   ├── 01_data_collection.ipynb
-│   ├── 02_data_cleaning.ipynb
-│   └── 03_kpi_engineering.ipynb
-│
-├── scripts/
-│   └── generate_hospital_kpis.py
 │
 ├── screenshots/
 │   ├── dashboard1.png
@@ -263,7 +260,7 @@ MedTrack_DV/
 # ▶️ How to Open the Project
 
 1. Install Tableau Desktop.
-2. Open the `MedTrack_DV.twbx` workbook.
+2. Open the `MedTrack_DV.twb` workbook.
 3. Navigate through the four dashboards using the built-in navigation buttons.
 4. Use the interactive filters to explore the data.
 
