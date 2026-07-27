@@ -46,8 +46,8 @@ TWB_CONTENT = """<?xml version='1.0' encoding='utf-8' ?>
             <mark class='Automatic' />
           </pane>
         </panes>
-        <rows>[federated.excel-direct].[Sum:Billing Amount]</rows>
-        <cols>[federated.excel-direct].[None:Department]</cols>
+        <rows>[federated.excel-direct].[sum:Billing Amount:qk]</rows>
+        <cols>[federated.excel-direct].[none:Department:nk]</cols>
       </table>
     </worksheet>
     <worksheet name='Patient Flow Sheet'>
@@ -68,8 +68,8 @@ TWB_CONTENT = """<?xml version='1.0' encoding='utf-8' ?>
             <mark class='Automatic' />
           </pane>
         </panes>
-        <rows>[federated.excel-direct].[Sum:Length of Stay]</rows>
-        <cols>[federated.excel-direct].[None:Admission Date]</cols>
+        <rows>[federated.excel-direct].[sum:Length of Stay:qk]</rows>
+        <cols>[federated.excel-direct].[none:Admission Date:nk]</cols>
       </table>
     </worksheet>
     <worksheet name='Department Analytics Sheet'>
@@ -90,8 +90,8 @@ TWB_CONTENT = """<?xml version='1.0' encoding='utf-8' ?>
             <mark class='Automatic' />
           </pane>
         </panes>
-        <rows>[federated.excel-direct].[Avg:Department Efficiency Score]</rows>
-        <cols>[federated.excel-direct].[None:Department]</cols>
+        <rows>[federated.excel-direct].[avg:Department Efficiency Score:qk]</rows>
+        <cols>[federated.excel-direct].[none:Department:nk]</cols>
       </table>
     </worksheet>
     <worksheet name='Resource Utilization Sheet'>
@@ -112,8 +112,8 @@ TWB_CONTENT = """<?xml version='1.0' encoding='utf-8' ?>
             <mark class='Automatic' />
           </pane>
         </panes>
-        <rows>[federated.excel-direct].[Avg:Bed Utilization Rate (%)]</rows>
-        <cols>[federated.excel-direct].[None:Hospital Name]</cols>
+        <rows>[federated.excel-direct].[avg:Bed Utilization Rate (%):qk]</rows>
+        <cols>[federated.excel-direct].[none:Hospital Name:nk]</cols>
       </table>
     </worksheet>
   </worksheets>
