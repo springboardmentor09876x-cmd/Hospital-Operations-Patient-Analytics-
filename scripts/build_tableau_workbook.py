@@ -153,6 +153,15 @@ TWB_CONTENT = """<?xml version='1.0' encoding='utf-8' ?>
   </dashboards>
   <windows>
     <window class='worksheet' name='Hospital Overview Sheet'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+      </cards>
     </window>
   </windows>
 </workbook>
