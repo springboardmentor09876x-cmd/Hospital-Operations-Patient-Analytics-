@@ -22,7 +22,6 @@ TWB_CONTENT = """<?xml version='1.0' encoding='utf-8' ?>
         </named-connections>
         <relation connection='excel-direct.connection' name='Sheet1' table='[Sheet1$]' type='table' />
       </connection>
-      <layout dim-ordering='alphabetical' dim-percentage='0.5' measure-ordering='alphabetical' measure-percentage='0.5' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
       </semantic-values>
@@ -154,7 +153,6 @@ TWB_CONTENT = """<?xml version='1.0' encoding='utf-8' ?>
   </dashboards>
   <windows>
     <window class='worksheet' name='Hospital Overview Sheet'>
-      <active />
     </window>
   </windows>
 </workbook>
