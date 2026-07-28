@@ -52,6 +52,9 @@ print("All required columns are available.")
 # KPI 2: Average Length of Stay
 # ==========================================
 
+average_los = df["Length of Stay"].mean()
+print(f"Average Length of Stay: {average_los:.2f} days")
+
 # ==========================================
 # Validate Missing Values in KPI Columns
 # ==========================================
@@ -73,9 +76,6 @@ for column in kpi_columns:
 if not missing_found:
     print("No missing values found in KPI columns.")
 
-
-average_los = df["Length of Stay"].mean()
-print(f"Average Length of Stay: {average_los:.2f} days")
 
 
 # ==========================================
@@ -157,6 +157,12 @@ for name, value in kpis.items():
         print(f"{name:30}: {value}")
 
 print("=================================")
+
+df["Total_Admissions"] = total_admissions
+df["Average_Length_of_Stay"] = average_los
+df["Readmission_Rate"] = readmission_rate
+df["Overall_Occupancy_Rate"] = occupancy_rate
+df["Bed_Utilization_Rate"] = occupancy_rate
 # ==========================================
 # Export Final Dataset
 # ==========================================
