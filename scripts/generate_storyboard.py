@@ -60,23 +60,37 @@ def add_panel(ax, x, y, w, h, title, content_type="chart", bg_color="#F2F4F7"):
             ax.plot([x+w*0.1, x+w*0.9], [yy, yy], color="#D9D9D9", linewidth=0.8)
 
 def add_sidebar_specs(ax, title, specs):
+    import textwrap
     container = patches.Rectangle((0.74, 0.03), 0.23, 0.85, fill=True, facecolor="#F8F9FA", edgecolor="#A6A6A6", linewidth=1)
     ax.add_patch(container)
     
     ax.text(0.75, 0.85, "Specifications", color="#1F4E78", fontsize=11, fontweight="bold")
     ax.plot([0.75, 0.95], [0.84, 0.84], color="#1F4E78", linewidth=1)
     
-    ax.text(0.75, 0.82, title, color="#333333", fontsize=9, fontweight="bold")
+    # We will wrap the title and specifications manually to prevent overlapping
+    y_pos = 0.81
     
-    y_pos = 0.77
+    # Draw Title (wrapped)
+    title_lines = textwrap.wrap(title, width=22)
+    for t_line in title_lines:
+        ax.text(0.75, y_pos, t_line, color="#333333", fontsize=9, fontweight="bold")
+        y_pos -= 0.022
+        
+    y_pos -= 0.008
+    
     for spec in specs:
         if spec.startswith("- "):
-            ax.text(0.75, y_pos, "• " + spec[2:], color="#595959", fontsize=8, wrap=True)
-            y_pos -= 0.035
+            bullet_text = "• " + spec[2:]
+            wrapped = textwrap.wrap(bullet_text, width=24)
+            for w_line in wrapped:
+                ax.text(0.75, y_pos, w_line, color="#595959", fontsize=8)
+                y_pos -= 0.020
         else:
-            y_pos -= 0.01
-            ax.text(0.75, y_pos, spec, color="#1F4E78", fontsize=8, fontweight="bold")
-            y_pos -= 0.025
+            y_pos -= 0.008
+            wrapped = textwrap.wrap(spec, width=22)
+            for w_line in wrapped:
+                ax.text(0.75, y_pos, w_line, color="#1F4E78", fontsize=8, fontweight="bold")
+                y_pos -= 0.020
 
 def generate_pdf():
     print(f"Generating storyboard PDF at {OUTPUT_PDF}...")
