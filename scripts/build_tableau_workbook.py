@@ -54,6 +54,9 @@ def main():
         print("Failed to obtain reference XML, compilation aborted.")
         return
         
+    # Generate Module 4 prototype deliverable
+    package_workbook("medtrack_prototype.twbx", xml_bytes)
+        
     # Generate Module 5 deliverable
     package_workbook("medtrack_dashboard_v1.twbx", xml_bytes)
     
