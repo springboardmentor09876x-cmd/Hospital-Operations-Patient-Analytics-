@@ -32,15 +32,6 @@ def extract_and_process_xml():
                     # 1. Clean trailing space in dashboard name
                     xml_str = xml_str.replace("Department Analytics ", "Department Analytics")
                     
-                    # 2. Enable show-tabs="true" in <windows> safely without backslashes
-                    if "<windows" in xml_str:
-                        xml_str = xml_str.replace('<windows ', '<windows show-tabs="true" ')
-                        xml_str = xml_str.replace('show-tabs="true" show-tabs="true"', 'show-tabs="true"')
-                        xml_str = xml_str.replace('show-tabs="true" show-tabs="false"', 'show-tabs="true"')
-                    
-                    # Cleanup any escaped quote artifacts
-                    xml_str = xml_str.replace("\\'", "'")
-                    
                     return xml_str.encode("utf-8")
     except Exception as e:
         print(f"Error extracting reference XML: {e}")
