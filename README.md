@@ -10,27 +10,27 @@ The project uses Python for data cleaning and KPI engineering and Tableau for in
 
 The project includes four interconnected Tableau dashboards:
 
-Hospital Overview – Hospital performance, admissions, occupancy, and readmission insights.
+* Hospital Overview – Hospital performance, admissions, occupancy, and readmission insights.
 
-Patient Flow – Admission, discharge, patient movement, and length-of-stay analysis.
+* Patient Flow – Admission, discharge, patient movement, and length-of-stay analysis.
 
-Department Analytics– Department-wise patient volume, efficiency, and readmission analysis.
+* Department Analytics– Department-wise patient volume, efficiency, and readmission analysis.
 
-Resource Utilization– Bed, staff, equipment, and resource utilization analysis.
+* Resource Utilization– Bed, staff, equipment, and resource utilization analysis.
 
 🛠️ Tech Stack
 
-Python
+* Python
 
-Pandas & NumPy
+* Pandas & NumPy
 
-Jupyter Notebook
+* Jupyter Notebook
 
-Tableau Desktop / Tableau Public
+* Tableau Desktop / Tableau Public
 
-Excel / CSV
+* Excel / CSV
 
-Git & GitHub
+* Git & GitHub
 
 🎯 Key Features
 
