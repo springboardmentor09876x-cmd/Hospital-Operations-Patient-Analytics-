@@ -11,8 +11,6 @@ The project uses **Microsoft Power BI** to analyze patient admissions, hospital 
 
 The dashboard is designed to help hospital administrators and healthcare managers monitor key performance indicators, identify operational patterns, compare departments, and support data-driven decision-making.
 
-> **Implementation Note:** The original project brief proposed Tableau as the visualization platform. With mentor approval, the dashboard was implemented using **Microsoft Power BI Desktop**.
-
 ---
 
 ## 🎯 Project Goals
