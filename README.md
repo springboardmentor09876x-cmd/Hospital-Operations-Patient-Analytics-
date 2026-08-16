@@ -117,7 +117,7 @@ The **Resource Utilization** page focuses on the effective use of hospital resou
 * Bed Utilization Analysis
 * Staff Allocation Monitoring
 * Equipment Utilization Tracking
-* Capacity Planning Insgiths
+* Capacity Planning Insights
 * Resource Availability Analysis
 
 #### Key Metrics
