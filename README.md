@@ -1,187 +1,205 @@
 # Hospital-Operations-Patient-Analytics-
-
-
 # MedTrack_DV — Hospital Analytics & Operations Dashboard
 
-## 📊 Project Overview
+## Project Overview
 
-**MedTrack_DV** is an interactive hospital analytics project developed during the **Internship** to transform hospital data into meaningful operational insights.
+**MedTrack_DV** is an interactive hospital analytics project developed to transform hospital data into meaningful operational insights using **Microsoft Power BI**.
 
-The project uses **Microsoft Power BI** to analyze patient admissions, hospital performance, department-level activity, bed utilization, readmissions, patient flow, and resource usage through a collection of interconnected dashboards.
+The project analyzes patient admissions, patient flow, department performance, bed utilization, readmissions, and hospital resource usage through four interconnected analytical dashboard pages.
 
-The dashboard is designed to help hospital administrators and healthcare managers monitor key performance indicators, identify operational patterns, compare departments, and support data-driven decision-making.
-
----
-
-## 🎯 Project Goals
-
-The primary objective of **MedTrack_DV** is to convert raw hospital records into an easy-to-understand analytical solution.
-
-The project focuses on:
-
-* Monitoring overall hospital performance through key metrics.
-* Understanding patient admission and discharge patterns.
-* Comparing performance across hospital departments.
-* Analyzing bed and staff utilization.
-* Identifying readmission patterns.
-* Evaluating patient flow and treatment activity.
-* Providing interactive filtering and navigation for easier analysis.
-* Presenting operational information through a centralized dashboard environment.
+The dashboard is designed to help hospital administrators and healthcare managers monitor operational performance, identify trends, compare departments, and support data-driven decision-making.
 
 ---
 
-## 🏥 Dashboard Suite
+# 1. Dataset Sources
 
-The final Power BI workbook contains four major analytical pages, with each page focusing on a different aspect of hospital operations.
+The project uses hospital patient and operational data containing information required for analyzing admissions, patient flow, department activity, resource utilization, bed occupancy, and readmissions.
 
-### 1. Hospital Overview
+### Dataset Files
 
-The **Hospital Overview** page provides an executive-level summary of hospital performance.
+The repository contains the following stages of the dataset:
 
-#### Analysis Includes
+| Dataset                       | Description                                                       |
+| ----------------------------- | ----------------------------------------------------------------- |
+| `hospital_raw_data.xlsx`      | Original hospital dataset used as the starting point for analysis |
+| `hospital_cleaned.xlsx`       | Dataset after cleaning and preparation                            |
+| `hospital_final_dataset.xlsx` | Final dataset prepared for Power BI dashboard development         |
+
+The final prepared dataset contains **10,000 patient records**.
+
+### Dataset Source
+
+**Source:** Kaggle, Global Hospital Flow Dynamics Dataset
+
+The dataset was processed and prepared before being used for dashboard development.
+
+### Data Preparation
+
+The preparation process included:
+
+* Handling inconsistent data
+* Standardizing relevant fields
+* Preparing categorical and numerical attributes
+* Creating derived analytical fields
+* Preparing KPI-related information
+* Structuring the final dataset for Power BI analysis
+
+### Data Processing Workflow
+
+```text
+Raw Hospital Data
+        ↓
+Data Collection
+        ↓
+Data Cleaning
+        ↓
+Data Transformation
+        ↓
+Final Dataset
+        ↓
+Dashboard Creation
+        ↓
+Power BI Analysis
+```
+
+---
+
+# 2. KPI Definitions
+
+The dashboard uses six primary KPIs to evaluate hospital operations.
+
+| KPI                             | Definition                                                            | Purpose                                                           |
+| ------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Total Admissions**            | Measures the total number of patient records handled by the hospital. | Helps monitor patient demand and overall hospital activity.       |
+| **Occupancy Rate**              | Indicates the level of hospital bed usage.                            | Helps monitor hospital capacity and bed availability.             |
+| **Average Length of Stay**      | Measures the average duration of patient stays.                       | Helps evaluate patient throughput and bed utilization.            |
+| **Readmission Rate**            | Tracks the proportion of patients marked as readmitted.               | Helps identify readmission patterns and monitor patient outcomes. |
+| **Bed Utilization Rate**        | Examines the utilization of available bed capacity.                   | Helps evaluate how effectively hospital beds are being used.      |
+| **Department Efficiency Score** | Provides a comparative measure of departmental performance.           | Helps compare operational efficiency across departments.          |
+
+### Additional Operational Metrics
+
+The dashboard also tracks:
+
+* Average Billing Amount
+* Total Discharges
+* Total Transfers
+* Available Beds
+* ICU Beds
+* Staff Utilization
+* Equipment Utilization
+
+These supporting metrics provide additional context for understanding hospital workload, capacity, and resource usage.
+
+---
+
+# 3. Dashboard Guide
+
+The final Power BI solution consists of **four integrated analytical pages**.
+
+## 3.1 Hospital Overview
+
+The **Hospital Overview** page provides an executive-level summary of overall hospital performance.
+
+### Main Analysis
 
 * Admissions Overview
-* Occupancy monitoring
-* Readmission analysis 
+* Occupancy Monitoring
+* Readmission Analysis
 * Hospital Performance KPIs
 * Monthly Operational Trends
 
-#### Key Metrics
+### Key Metrics
 
 * Total Admissions
-* Avg Length of Stay
+* Average Length of Stay
 * Bed Occupancy %
-* Avg Billing Amount
+* Average Billing Amount
 * Equipment in Use
 
-This page acts as the primary entry point for understanding the overall hospital situation.
+This page acts as the main entry point for understanding the current operational situation of the hospital.
 
 ---
 
-### 2. Patient Flow Analysis
+## 3.2 Patient Flow Analysis
 
-The **Patient Flow** page focuses on how patients move through the hospital and provides insights into admission, discharge, transfer, and stay patterns.
+The **Patient Flow Analysis** page focuses on how patients move through the hospital.
 
-#### Analysis Includes
+### Main Analysis
 
-* Admission trends
+* Admission Trends
 * Discharge Tracking
-* Patient Movement Analysis
+* Patient Movement
 * Average Stay Analysis
 * Peak Patient Load Monitoring
 
-#### Key Metrics
+### Key Metrics
 
 * Total Admissions
 * Total Discharges
 * Total Transfers
 * Readmission Rate %
-* Avg Length of Stay
+* Average Length of Stay
 
-The page provides a clearer view of patient movement and helps identify patterns in hospital workload.
+This page helps identify patient movement patterns and periods of higher hospital workload.
 
 ---
 
-### 3. Department Analytics
+## 3.3 Department Analytics
 
-The **Department Analytics** page enables detailed comparison between hospital departments.
+The **Department Analytics** page provides detailed comparison between hospital departments.
 
-#### Analysis Includes
+### Main Analysis
 
-* Treatment Capacity Analysis
+* Treatment Capacity
 * Readmission by Department
-* Department Efficiency Comparison
+* Department Efficiency
 * Patient Volume by Department
-* Department Performance Analysis
+* Department Performance
 
-#### Key Metrics
+### Key Metrics
 
 * Total Admissions
-* Avg Length of Stay
+* Average Length of Stay
 * Readmission Rate %
 * Bed Occupancy %
 * Total Transfers
 
-Interactive comparisons make it possible to identify departments with higher patient loads, different readmission patterns, and variations in operational efficiency.
-
-This page is particularly useful for **department managers and hospital administrators** who need to compare performance across different units.
+This page helps administrators identify departments with higher workloads, different readmission patterns, and variations in operational performance.
 
 ---
 
-### 4. Resource Utilization
+## 3.4 Resource Utilization
 
-The **Resource Utilization** page focuses on the effective use of hospital resources.
+The **Resource Utilization** page focuses on how hospital resources are being utilized.
 
-#### Analysis Includes
+### Main Analysis
 
-* Bed Utilization Analysis
-* Staff Allocation Monitoring
-* Equipment Utilization Tracking
-* Capacity Planning Insights
-* Resource Availability Analysis
+* Bed Utilization
+* Staff Allocation
+* Equipment Utilization
+* Capacity Planning
+* Resource Availability
 
-#### Key Metrics
+### Key Metrics
 
 * Beds Available
 * Bed Occupancy %
 * ICU Beds
 * Staff Utilization %
 * Equipment in Use
-  
-This dashboard provides a broader view of how available hospital resources are being utilized and where capacity may require closer monitoring.
 
----
-## 📌 Key Performance Indicators
-
-The project incorporates several KPIs to measure hospital operations.
-
-| KPI | Purpose |
-| --- | --- |
-| **Total Admissions** | Measures the overall number of patient records handled by the hospital. |
-| **Occupancy Rate** | Indicates the level of hospital bed usage. |
-| **Average Length of Stay** | Measures the average duration of patient stays. |
-| **Readmission Rate** | Tracks the proportion of patients marked as readmitted. |
-| **Bed Utilization Rate** | Examines utilization of available bed capacity. |
-| **Department Efficiency Score** | Provides a comparative measure of departmental performance. |
-| **Avg Billing Amount** | Tracks financial volume and average revenue per patient admission. |
-| **Total Discharges** | Tracks completed patient discharges handled by the hospital. |
-| **Total Transfers** | Measures patient transfers within the hospital. |
-| **Available Beds** | Tracks available bed capacity. |
-| **ICU Beds** | Monitors dedicated intensive care bed capacity across departments. |
-| **Staff Utilization** | Helps monitor staff usage across departments. |
-| **Equipment Utilization** | Provides insight into equipment usage. |
----
-
-## 🔄 From Raw Data to Dashboard
-
-The project follows a complete analytics workflow:
-
-**Raw Hospital Data → Data Collection → Data Cleaning → Transformation → KPI Development → Data Modeling → Dashboard Development → Testing → Final Visualization**
-
-### Data Preparation
-
-The hospital dataset was processed before being used for visualization.
-
-The preparation workflow included:
-
-* Removing or handling inconsistent data.
-* Standardizing relevant fields.
-* Preparing categorical and numerical attributes.
-* Creating derived analytical fields.
-* Preparing KPI-related information.
-* Structuring the dataset for Power BI analysis.
-
-The final dataset contains **10,000 patient records**.
+This page supports analysis of hospital capacity and resource utilization.
 
 ---
 
-## 🖱️ Interactive Dashboard Experience
+## Dashboard Navigation & Interaction
 
-One of the main goals of the project was to make the dashboard interactive rather than simply presenting static charts.
+The dashboard is designed as an integrated Power BI report.
 
-### 🔹 Synced Filters
+### Synced Filters
 
-Common filters such as:
+The following filters are synchronized across dashboard pages:
 
 * Admission Type
 * Department
@@ -189,107 +207,204 @@ Common filters such as:
 * City
 * Hospital Name
 
-are synchronized across dashboard pages.
+This allows users to maintain the same filtering context while moving between pages.
 
-This allows users to maintain the same filtering context while moving between different analytical views.
+### Navigation
 
-### 🔹 Page Navigation
-
-A **Power BI Page Navigator** provides navigation between the four dashboard pages.
-
-Users can move between:
-
-**Hospital Overview → Patient Flow → Department Analytics → Resource Utilization**
-
-without manually searching through report pages.
-
-### 🔹 Consistent Dashboard Design
-
-The pages follow a consistent visual structure, including:
-
-* KPI cards
-* Interactive filters
-* Consistent navigation
-* Charts and analytical visuals
-* Structured layouts
-* Unified dashboard styling
-
-This provides a seamless experience when moving across the report.
-
----
-
-## 🧪 Testing & Validation
-
-The dashboard was tested to ensure that the implemented visuals and analytical calculations behaved as expected.
-
-Validation included checking:
-
-* KPI calculations
-* Filter interactions
-* Slicer synchronization
-* Page navigation
-* Visual responsiveness
-* Department-level filtering
-* Data consistency between source data and dashboard outputs
-
-The final dashboard was reviewed as an integrated Power BI report rather than as four independent pages.
-
----
-
-## 🛠️ Technology Stack
-
-| Category                          | Technology                                  |
-| --------------------------------- | ------------------------------------------- |
-| **Programming & Data Processing** | Python                                      |
-| **Data Manipulation**             | Pandas, NumPy                               |
-| **Data Cleaning**                 | Python                                      |
-| **Business Intelligence**         | Microsoft Power BI Desktop                  |
-| **Data Visualization**            | Power BI                                    |
-| **Dashboard Interaction**         | Sync Slicers, Page Navigator, Drill-Through |
-| **Analytical Calculations**       | DAX                                         |
-| **Notebook Environment**          | Jupyter Notebook                            |
-| **Data Storage**                  | Microsoft Excel                             |
-| **Documentation**                 | Markdown                                    |
-| **Version Control**               | Git & GitHub                                |
-
----
-
-## 📁 Project Structure
-
-The project is maintained as a **flat repository structure**. All Power BI reports, Jupyter notebooks, Excel datasets, documentation, and supporting project files are stored directly inside the main **MedTrack_DV** repository.
+A **Power BI Page Navigator** connects the four dashboard pages:
 
 ```text
-MedTrack_DV/
-│
-├── 📄 MedTrack_DV.pbix
-├── 📄 README.md
-├── 📄 dashboard_storyboard.pdf
-│
-├── 📓 data_collection.ipynb
-├── 📓 generate_hospital_kpis.ipynb
-├── 📓 hospital_cleaning.ipynb
-│
-├── 📊 hospital_raw_data.xlsx
-├── 📊 hospital_cleaned.xlsx
-├── 📊 hospital_final_dataset.xlsx
-│
-├── 📄 medtrack_dashboard_v1.pbix
-└── 📄 medtrack_prototype.pbix
+Hospital Overview
+        ↓
+Patient Flow Analysis
+        ↓
+Department Analytics
+        ↓
+Resource Utilization
 ```
 
-## 📄 File Description
+### Interactive Features
 
-| File                             | Description                                                                                                                             |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| **MedTrack_DV.pbix**             | Main and final Power BI dashboard/report file.                                                                                          |
-| **README.md**                    | Project documentation containing the project overview, objectives, workflow, dashboard details, technologies, and repository structure. |
-| **dashboard_storyboard.pdf**     | Dashboard planning and storyboard document used to define the intended dashboard structure and visual flow.                             |
-| **data_collection.ipynb**        | Jupyter Notebook used during the hospital data collection and preparation stage.                                                        |
-| **generate_hospital_kpis.ipynb** | Jupyter Notebook used for generating and preparing hospital KPI-related information.                                                    |
-| **hospital_cleaning.ipynb**      | Jupyter Notebook used for cleaning and preparing the hospital dataset.                                                                  |
-| **hospital_raw_data.xlsx**       | Raw hospital dataset before the cleaning and transformation process.                                                                    |
-| **hospital_cleaned.xlsx**        | Cleaned version of the hospital dataset after data preparation.                                                                         |
-| **hospital_final_dataset.xlsx**  | Final dataset prepared for analytical and dashboard development.                                                                        |
-| **medtrack_dashboard_v1.pbix**   | Earlier/versioned Power BI dashboard implementation.                                                                                    |
-| **medtrack_prototype.pbix**      | Prototype Power BI dashboard created during the development stage.                                                                      |
+* KPI Cards
+* Synchronized Slicers
+* Page Navigator
+* Drill-Through
+* Interactive Charts
+* Department Filtering
+* Consistent Dashboard Layout
 
+---
+
+# 4. Healthcare Operations Methodology
+
+The project applies a data-driven methodology to understand and monitor hospital operations.
+
+The methodology converts raw hospital records into operational indicators that can support hospital administrators and department managers.
+
+## Patient Demand Analysis
+
+Admission volumes and trends are analyzed to understand patient demand and overall hospital workload.
+
+## Patient Flow Analysis
+
+Admissions, discharges, transfers, and average length of stay are examined to understand patient movement and hospital throughput.
+
+## Bed & Capacity Management
+
+Occupancy rate and bed utilization are used to monitor available hospital capacity and identify areas where bed demand may require attention.
+
+## Department Performance Analysis
+
+Department-level admission volumes, occupancy, readmission rates, length of stay, and efficiency measures are compared to identify differences in operational performance.
+
+## Resource Utilization
+
+Staff, equipment, ICU beds, and other hospital resources are monitored to understand utilization and support better resource planning.
+
+## Operational Analytics Flow
+
+```text
+Hospital Data
+      ↓
+Data Cleaning & Preparation
+      ↓
+KPI Development
+      ↓
+Patient & Operational Analysis
+      ↓
+Department Comparison
+      ↓
+Resource Utilization Analysis
+      ↓
+Operational Insights
+      ↓
+Data-Driven Decision Support
+```
+
+The overall methodology connects patient-level data with hospital-level operational indicators to provide a centralized view of healthcare performance.
+
+---
+
+# 5. Project Structure
+
+The project is organized into separate folders for dashboard files, datasets, documentation, and analysis notebooks.
+
+```text
+Hospital-Operations-Patient-Analytics-/
+│
+├── Dashboard/
+│   ├── MedTrack_DV.pbix
+│   ├── medtrack_dashboard_v1.pbix
+│   └── medtrack_prototype.pbix
+│
+├── Data/
+│   ├── hospital_cleaned.xlsx
+│   ├── hospital_final_dataset.xlsx
+│   └── hospital_raw_data.xlsx
+│
+├── Docs/
+│   ├── Dashboard Testing Report.pdf
+│   ├── QA Checklist.pdf
+│   └── dashboard_storyboard.pdf
+│
+├── Scripts/
+│   ├── data_collection.ipynb
+│   ├── generate_hospital_kpis.ipynb
+│   └── hospital_cleaning.ipynb
+│
+└── README.md
+```
+
+### Folder Responsibilities
+
+**Dashboard/**
+Contains Power BI dashboard and prototype files.
+
+**Data/**
+Contains raw, cleaned, and final datasets used throughout the project.
+
+**Docs/**
+Contains testing, quality assurance, dashboard planning and final documentation.
+
+**Scripts/**
+Contains Jupyter notebooks used for data collection, cleaning, and KPI preparation.
+
+---
+
+# 6. Deployment
+
+## GitHub Repository
+
+The project is organized and maintained in a GitHub repository containing the dashboard files, datasets, analysis notebooks, and project documentation.
+
+The repository provides a centralized location for accessing the complete project and its supporting resources.
+
+## Power BI
+
+For the final implementation the dashboard was developed using **Microsoft Power BI**.
+
+The final visualization and dashboard delivery are therefore provided through Power BI files in the `Dashboard/` folder.
+
+---
+
+# 7. Testing & Validation
+
+The dashboard was tested as an integrated report to verify that the analytical calculations and interactive features behaved as expected.
+
+Testing included:
+
+* KPI calculation validation
+* Filter interaction testing
+* Slicer synchronization testing
+* Page navigation testing
+* Visual responsiveness testing
+* Department-level filtering
+* Data consistency checks
+
+Detailed testing documents are available in the `Docs/` folder:
+
+* `Dashboard Testing Report.pdf`
+* `QA Checklist.pdf`
+
+---
+
+# 8. Technology Stack
+
+| Area                    | Technology                                  |
+| ----------------------- | ------------------------------------------- |
+| Data Collection         | Python                                      |
+| Data Processing         | Pandas, NumPy                               |
+| Data Cleaning           | Python                                      |
+| Data Storage            | Microsoft Excel                             |
+| Data Analysis           | Python, Jupyter Notebook                    |
+| Business Intelligence   | Microsoft Power BI                          |
+| Visualization           | Power BI                                    |
+| Dashboard Interaction   | Sync Slicers, Page Navigator, Drill-Through |
+| Documentation           | Markdown                                    |
+| Version Control         | Git & GitHub                                |
+
+---
+
+# 9. Module 8 Deliverables
+
+The completed project provides the required outcomes:
+
+* Dataset source documentation
+* KPI definitions
+* Dashboard guide
+* Healthcare operations methodology
+* Organized project structure
+* GitHub repository
+* Final Power BI dashboard
+* QA Checklist
+* Dashboard Testing Report
+* Supporting datasets
+* Data processing scripts
+
+---
+
+# Project Outcome
+
+MedTrack_DV demonstrates how raw hospital data can be transformed into meaningful operational insights using Power BI.
+
+By integrating patient admissions, patient flow, department performance, bed utilization, readmissions, and resource utilization into a unified dashboard environment, the project provides a portfolio-ready analytical solution for understanding and monitoring hospital operations.
