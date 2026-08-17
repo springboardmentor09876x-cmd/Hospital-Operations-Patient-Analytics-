@@ -64,5 +64,4 @@ Documentation & Delivery
 
 - Cleaned, KPI-engineered hospital dataset
 - Four interactive dashboards
-- Dashboard build guide
 - Full project documentation
